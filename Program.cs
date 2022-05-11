@@ -16,10 +16,20 @@ namespace Cs_3_report
             }
             public decimal _div(decimal a, decimal b)
             {
+                if (a == 0 || b == 0)
+                {
+                    Console.WriteLine(" 0은 나눌수 없습니다.");
+                    Environment.Exit(0);
+                }
                 return a / b;
             }
             public decimal _share(decimal a, decimal b)
             {
+                if (a == 0 || b == 0)
+                {
+                    Console.WriteLine(" 0은 나눌수 없습니다.");
+                    Environment.Exit(0);
+                }
                 return a % b;
             }
             public decimal _multiply(decimal a, decimal b)
@@ -60,7 +70,7 @@ namespace Cs_3_report
                 int num, check = 1;
 
                 //숫자가 아닐경우 예외처리
-                try   
+                try
                 {
                     // 1번 인자 받기
                     Console.Write("첫번째 숫자(정수 or 실수)를 입력하세요 ex) 1, 1.4 : ");
@@ -95,7 +105,7 @@ namespace Cs_3_report
                     _cal._abs(input1, input2);
                     check = 0;
                 }
-                else if (num == 7) { break;}
+                else if (num == 7) { break; }
                 else
                 {
                     Console.WriteLine("다시입력하세요");
